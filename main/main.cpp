@@ -8,7 +8,7 @@ public:
     int longestMountain(int arr[], int n)
     {
        int p1=0,ans=0;
-        for(int i=1;i<n;i++)
+        for(int i=1;i<n-1;i++)
         {
             if(arr[i]>arr[i-1])
             {
@@ -16,7 +16,7 @@ public:
             }
             if(arr[i]==arr[i-1]) p1=0;
             int cnt=0;
-            while(i<n and arr[i+1]<arr[i])
+            while(i<n-1 and arr[i+1]<arr[i])
             {
                 cnt++;
                 i++;
